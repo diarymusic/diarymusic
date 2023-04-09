@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Diary Music</title>
+</head>
+<style>
+    @font-face
+    {
+        font-family: "shs";
+        src: url("/fonts/SHSSH.ttf") format("truetype");
+    }
+    @font-face
+    {
+        font-family: "nico";
+        src: url("/fonts/NicoMoji.ttf") format("truetype");
+    }
+    .main
+    {
+        background-image: url("/pic/b2.jpg");
+        background-attachment: scroll;
+        background-repeat: repeat;
+    }
+    .main-blur
+    {
+        float: left;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        filter: blur(5px);
+    }
+    .content
+    {
+
+    }
+    .content-front
+    {
+
+    }
+    .para
+    {
+        font-family: shs;
+        margin: 25px;
+        width:auto;
+        background-color: rgba(221, 235, 248, 0.58);
+        border-left-style: solid;
+        border-left-color: #00d93d;
+        border-left-width: medium;
+        padding: 10px;
+        text-align: left;
+    }
+    div.a1
+    {
+        font-family: nico;
+        margin:25px;
+        width:auto;
+        background-color: rgba(221, 235, 248, 0.58);
+        border-left-style: solid;
+        border-left-color: #00d93d;
+        border-left-width: thick;
+        padding: 10px;
+        text-align: left;
+    }
+    #a3
+    {
+        margin: auto;
+    }
+    #a3:hover
+    {
+        cursor: pointer;
+    }
+    .btm
+    {
+        width: 134px;
+        height: 20px;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        font-family: shs;
+        border-right-color: #00d93d;
+        border-right-style: solid;
+        border-right-width: thin;
+        border-style: solid;
+        border-width: thin;
+        cursor: pointer;
+        transition: all 0.4s;
+        opacity: 0;
+    }
+    .btm:after
+    {
+
+    }
+    .btm:hover
+    {
+        transform: scale(1);
+        opacity: 1;
+    }
+    #logo
+    {
+        opacity: 0;
+        transition: all 0.4s;
+    }
+    #logo:hover
+    {
+        transform: scale(1);
+        opacity: 100%;
+    }
+    .fengeline
+    {
+        width: auto;
+        height: 30px;
+        margin: 25px;
+        background-color: rgba(255, 215, 0, 0.18);
+        text-align: center;
+        font-family: shs;
+        letter-spacing: 4px;
+        border-left-style: solid;
+        border-left-color: gold;
+    }
+    .ba1
+    {
+        margin: 25px;
+        border-left-style: solid;
+        border-left-color: #00d93d;
+        border-left-width: thick;
+        width: auto;
+
+    }
+    .ldt
+    {
+        width: 500px;
+        transition: all 0.4s;
+
+    }
+    .ldt:hover
+    {
+        cursor: pointer;
+        transform: scale(1.04);
+    }
+</style>
+<script>
+    function f1()
+    {
+        window.open("https://www.beatarray.com/label/DiaryMusic");
+    }
+</script>
+<body>
+<div class="main main-blur"></div>
+    <div class="content content-front">
+    <div class="a1">
+        <div class="a2" onclick="f1()">
+            <h1 id="a3">diary music.</h1>
+        </div>
+    </div>
+    <!--img src="/pic/ba1.jpg" class="ba1"/-->
+    <div>
+        <div class="fengeline">
+            <p>ABOUT US</p>
+        </div>
+        <p class="para">DiaryMusic（记事簿）是来自中国的新兴电子音乐厂牌，由电子音乐制作人L350iR、Hut、FXB1RD三人于2023.1.19成立，目前已完成厂牌初步建设，拥有完善的审核、宣发及美工制作，由尘音文化担任全球发行工作
+        </p>
+        <div class="fengeline"><p>LINKAGES</p></div>
+        <div>
+            <p class="para">我们会与其他优秀的厂牌/社团进行联动，目前我们已联动厂牌/社团如下所示:</p><br>
+
+            <div id="TR"class="para" onclick="window.open('https://www.beatarray.com/label/TrailblazersRadar')">
+                <p>Trailblazers Radar 开拓者雷达</p>
+                <img alt="封面图已更换" class="ldt" src="https://www.beatarray.com/uploads/1674629951413-mmexport1674629923371.jpg"/>
+
+            </div><br>
+
+            <div class="para" onclick="window.open('https://www.beatarray.com/label/RosyCloudSounds)')">
+                <p>Rosy Cloud Sounds 霞之声</p>
+                <img alt="封面图已更换" class="ldt" src="https://www.beatarray.com/uploads/1657801035504-%E5%B0%81%E9%9D%A2.jpg"/>
+            </div><br>
+
+            <div class="para" onclick="window.open('https://www.beatarray.com/label/HilarityLeapRecords')">
+                <p>Hilarity Leap Records 跃动记录</p>
+                <img alt="封面图已更换" class="ldt" src="https://www.beatarray.com/uploads/1678530928782-%E6%9C%AA%E6%A0%87%E9%A2%98-1.png"/>
+            </div><br>
+
+            <div class="para" onclick="window.open('https://www.beatarray.com/label/WaftwilightRecords')">
+                <p>Waftwilight Records 薄暮记录</p>
+                <img alt="封面图已更换" class="ldt" src="https://www.beatarray.com/uploads/1671241230851-1671241070639.jpg"/>
+            </div><br>
+
+            <div class="para" onclick="window.open('https://www.beatarray.com/label/MacrameMusic')">
+                <p>Macrame Music 流苏音乐</p>
+                <img alt="封面图已更换" class="ldt" src="https://www.beatarray.com/uploads/1641739241941-BA%E5%B0%81%E9%9D%A2.jpg"/>
+                <br></div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <div class="btm">
+        <img src="/pic/l3.png" alt="diary" width="134" height="20" onclick="f1()" id="logo" />
+    </div>
+
+
+</body>
+</html>
