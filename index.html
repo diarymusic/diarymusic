@@ -29,6 +29,40 @@
                 }
             });
         });
+
+        $(function () {
+            $(document).on('scroll', function () {
+                var h = $(window).scrollTop();
+                var maxh = $(document).height();
+                var currh = $(window).height();
+                var num = Math.ceil((h - 100) / 160);
+                var str = ".p" + num;
+                if (h > 100 && h < (maxh - currh - 1)) {
+                    $(str).addClass('lishow');
+                } else if (h >= (maxh - currh - 1)) {
+                    $('.fengeline').addClass('lishow');
+                } else {
+                    $('.fengeline').removeClass('lishow');
+                }
+            });
+        });
+
+        $(function () {
+            $(document).on('scroll', function () {
+                var h = $(window).scrollTop();
+                var maxh = $(document).height();
+                var currh = $(window).height();
+                var num = Math.ceil((h - 100) / 160);
+                var str = ".hidd" + num;
+                if (h > 100 && h < (maxh - currh - 1)) {
+                    $(str).addClass('yc');
+                } else if (h >= (maxh - currh - 1)) {
+                    $('.hid').addClass('yc');
+                } else {
+                    $('.hid').removeClass('yc');
+                }
+            });
+        });
     </script>
     <style>
         @font-face {
@@ -43,7 +77,8 @@
 
         .main
         {
-            background-image: url("pic/b6.jpg");
+            background-color: rgba(190, 209, 215, 0.98);
+            /*background-image: url("pic/b6.jpg");*/
             /*background-image: url("https://thumbsnap.com/f/AMA1YaWp");*/
             background-attachment: fixed;
             background-repeat: repeat;
@@ -313,6 +348,8 @@
         }
         .arrowSS {
             animation: bounce-in 2s infinite; /* 启动动画特效 */
+            transition: all 0.4s;
+            opacity: 1;
         }
         .main:before
         {
@@ -381,6 +418,10 @@
             top: 0;
             opacity: 1;
         }
+        .yc
+        {
+            opacity: 0;
+        }
     </style>
 </head>
 
@@ -408,7 +449,7 @@
             <p class="p1 para">
                 DiaryMusic（记事簿）是来自中国的新兴电子音乐厂牌，由电子音乐制作人L350iR、Hut、FXB1RD三人于2023.1.19成立，目前已完成厂牌初步建设，拥有完善的审核、宣发及美工制作，由尘音文化担任全球发行工作
             </p>
-            <div class="p1 arrowSS">
+            <div class="hidd1 arrowSS hid">
                 <a href="#anchorSS" class="arrowSS_style"></a>
             </div>
             <div class="p2 para fengeline"><p>ARTWORKS<br>我们的美工</p></div>
