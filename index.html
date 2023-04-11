@@ -63,6 +63,22 @@
                 }
             });
         });
+        $(function () {
+            $(document).on('scroll', function () {
+                var h = $(window).scrollTop();
+                var maxh = $(document).height();
+                var currh = $(window).height();
+                var num = Math.ceil((h - 100) / 160);
+                var str = ".ti" + num;
+                if (h > 100 && h < (maxh - currh - 1)) {
+                    $(str).addClass('sh');
+                } else if (h >= (maxh - currh - 1)) {
+                    $('.t1').addClass('sh');
+                } else {
+                    $('.t1').removeClass('sh');
+                }
+            });
+        });
     </script>
     <style>
         @font-face {
@@ -119,14 +135,20 @@
             font-family: nico;
             margin: 25px;
             text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
             /*border-left-style: solid;*/
             /*border-left-color: #00d93d;*/
             padding: 10px;
-            border-radius: 10px;
+            /*border-radius: 10px;
             background-color: rgba(255, 255, 255, 0.2);
             -webkit-backdrop-filter: blur(8px);
             backdrop-filter: blur(8px);
-            box-shadow:inset 0 0 6px rgba(255, 255, 255, 0.2);
+            box-shadow:inset 0 0 6px rgba(255, 255, 255, 0.2);*/
         }
 
         #a3 {
@@ -156,27 +178,52 @@
         }
 
         .btm {
+
+            text-align: center;
+            font-family: shs;
+/*            border-right-color: #00d93d;
+            border-right-style: solid;
+            border-right-width: thin;
+            border-style: solid;
+            border-width: thin*/;
+
+        }
+        .btm2
+        {
             width: 134px;
             height: 20px;
             position: fixed;
             right: 0;
             bottom: 0;
-            text-align: center;
-            font-family: shs;
-            border-right-color: #00d93d;
-            border-right-style: solid;
-            border-right-width: thin;
-            border-style: solid;
-            border-width: thin;
             cursor: pointer;
             transition: all 0.4s;
+        }
+        .logotext
+        {
+            position: relative;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transition: all 0.4s;
+            opacity: 1;
+        }
+        .btm1
+        {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            transition: all 0.4s;
+            opacity: 1;
+        }
+        .btm2:hover .btm1
+        {
+            transform: scale(1.01);
             opacity: 0;
         }
-
-        .btm:after {}
-
-        .btm:hover {
-            transform: scale(1);
+        .btm2:hover #logo
+        {
+            transform: scale(1.0);
             opacity: 1;
         }
 
@@ -185,7 +232,7 @@
             transition: all 0.4s;
         }
 
-        #logo:hover {
+        .btm:hover #logo{
             transform: scale(1);
             opacity: 100%;
         }
@@ -422,6 +469,30 @@
         {
             opacity: 0;
         }
+        .pagefoot
+        {
+            font-family: shs;
+            width: auto;
+            height: 150px;
+            background-color: #333333;
+            color: white;
+        }
+        #qr
+        {
+            width :120px;
+            height:120px ;
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        #qr1
+        {
+            width: 120px;
+            height: 120px;
+
+        }
     </style>
 </head>
 
@@ -434,15 +505,15 @@
 <body>
     <div class="main main-blur">
     <div class="content content-front">
-        <div class="a1">
+        <div class="t1 a1">
             <div class="a2" onclick="f1()">
                 <!--<h1 id="a3">diary music.</h1>-->
                 <img src="pic/dl1.png" width="50%"/>
             </div>
-        </div>
+        </div><br><br><br><br><br><br><br><br><br><br>
         <!--img src="/pic/ba1.jpg" class="ba1"/-->
         <div class="lishow">
-            <div class="fengeline">
+            <div class="p1 para fengeline">
                 <p>ABOUT US<br>关于我们</p>
             </div>
 
@@ -467,34 +538,33 @@
                 <p class="p3 para">我们会与其他优秀的厂牌/社团进行联动，目前我们已联动厂牌/社团如下所示:</p><br>
 
                 <div id="TR" class="p4 para" onclick="window.open('https://www.beatarray.com/label/TrailblazersRadar')">
-                    <p>Trailblazers Radar 开拓者雷达</p>
+                    <p>Trailblazers Radar 开拓者雷达</p><br>
                     <img alt="封面图已更换" class="ldt"
-                        src="https://www.beatarray.com/uploads/1674629951413-mmexport1674629923371.jpg" />
-
+                        src="https://www.beatarray.com/uploads/1674629951413-mmexport1674629923371.jpg" /><br>
                 </div><br>
 
                 <div class="p5 para" onclick="window.open('https://www.beatarray.com/label/RosyCloudSounds)')">
-                    <p>Rosy Cloud Sounds 霞之声</p>
+                    <p>Rosy Cloud Sounds 霞之声</p><br>
                     <img alt="封面图已更换" class="ldt"
-                        src="https://www.beatarray.com/uploads/1657801035504-%E5%B0%81%E9%9D%A2.jpg" />
+                        src="https://www.beatarray.com/uploads/1657801035504-%E5%B0%81%E9%9D%A2.jpg" /><br>
                 </div><br>
 
                 <div class="p6 para" onclick="window.open('https://www.beatarray.com/label/HilarityLeapRecords')">
-                    <p>Hilarity Leap Records 跃动记录</p>
+                    <p>Hilarity Leap Records 跃动记录</p><br>
                     <img alt="封面图已更换" class="ldt"
-                        src="https://www.beatarray.com/uploads/1678530928782-%E6%9C%AA%E6%A0%87%E9%A2%98-1.png" />
+                        src="https://www.beatarray.com/uploads/1678530928782-%E6%9C%AA%E6%A0%87%E9%A2%98-1.png" /><br>
                 </div><br>
 
                 <div class="p7 para" onclick="window.open('https://www.beatarray.com/label/WaftwilightRecords')">
-                    <p>Waftwilight Records 薄暮记录</p>
+                    <p>Waftwilight Records 薄暮记录</p><br>
                     <img alt="封面图已更换" class="ldt"
-                        src="https://www.beatarray.com/uploads/1671241230851-1671241070639.jpg" />
+                        src="https://www.beatarray.com/uploads/1671241230851-1671241070639.jpg" /><br>
                 </div><br>
 
                 <div class="p8 para" onclick="window.open('https://www.beatarray.com/label/MacrameMusic')">
-                    <p>Macrame Music 流苏音乐</p>
+                    <p>Macrame Music 流苏音乐</p><br>
                     <img alt="封面图已更换" class="ldt"
-                        src="https://www.beatarray.com/uploads/1641739241941-BA%E5%B0%81%E9%9D%A2.jpg" />
+                        src="https://www.beatarray.com/uploads/1641739241941-BA%E5%B0%81%E9%9D%A2.jpg" /><br>
                     <br>
 
                 </div>
@@ -520,32 +590,32 @@
                 </div>
                 <div class="p14 fengeline"><p>CONTACT US<br>联系我们</p></div>
                 <p class="p15 para">
-                    ①QQ群:710516831（投稿备选）
-
+                    ①QQ群:710516831（投稿备选）<br>
                     ②主理人QQ:2309115440<br>
-
-                    <span class="links" onclick="window.open('https://dzl.pw/_DC9s')">③DizzyLab</span><br>
-
+                    ③DizzyLab:https://dzl.pw/_DC9s<br>
                     ④邮箱:DiaryMusic@outlook.com（投稿备选）<br>
-
-                    <span class="links" onclick="window.open('https://b23.tv/qDHE7Yw')">⑤BiliBili</span><br>
+                    ⑤BiliBili:https://b23.tv/qDHE7Yw<br>
                 </p>
             </div>
         </div>
     </div>
-
+        <div class="pagefoot">
+            <!--<div id="qr"><img src="pic/qr.png" id="qr1"/></div>-->
+            <p>Diary Music 2023</p>
+        </div>
     </div>
-    <div class="top"><p>We're Waiting for You</p><br>
+<!--    <div class="top"><p>We're Waiting for You</p><br>
         <p>Wecome to Diary Music</p>
-    </div>
+    </div>-->
 
 
-
+<div class="btm2">
     <div class="btm">
         <img src="pic/l3.png" alt="diary" width="134" height="20" onclick="f1()" id="logo" />
-        <p class="logotext">run to see the fun.</p>
-    </div>
 
+    </div>
+    <div class="btm1"><p class="logotext">run to see the fun.</p></div>
+</div>
 
 </body>
 
